@@ -1,0 +1,51 @@
+﻿@page "/StudDetails"
+@using BlazorApp1.Models
+@using Microsoft.EntityFrameworkCore;
+@inject IStudentService StudentService
+
+<h3>Student Data</h3>
+
+@if (students != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>StudentId</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Fees</th>
+                <th>Gender</th>
+                <th>IsDeleted</th>
+                <th>EmailId</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in students)
+            {
+                <tr>
+                    <td>@student.StudentId</td>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.Fees</td>
+                    <td>@student.Gender</td>
+                    <td>@student.IsDeleted</td>
+                    <td>@student.EmailId</td>
+                    <td>@student.Skills</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No student data available.</p>
+}
+@code {
+    private List<StudTable>? students;
+
+    protected override async Task OnInitializedAsync()
+    {
+        students = await StudentService.GetStudentsAsync();
+    }
+}

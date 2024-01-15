@@ -1,0 +1,85 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "Ruchi_studContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "BlazorApp1",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[StudTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DeleteStud]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Retrive]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[SoftDeletedStudView]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[SoftDeleteStud]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudAddDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudDeleteById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudView]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudViewById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudViewWithPageSize]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateStudent]",
+         "ObjectType": 1
+      }
+   ],
+   "UiHint": "firozhaider.Ruchi_stud.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
