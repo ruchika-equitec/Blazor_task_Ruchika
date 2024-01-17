@@ -7,8 +7,6 @@ namespace BlazorApp1.Pages
     {
         [Parameter]
         public int StudentID { get; set; }
-
-        // private StudViewResult selectedStudent;
         StudTable studs = new StudTable();
         private List<Skill> skills = new List<Skill>
     {
