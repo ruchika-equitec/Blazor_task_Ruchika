@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 namespace BlazorApp1.Models;
 public partial class Ruchi_studContext : DbContext
@@ -12,6 +13,7 @@ public partial class Ruchi_studContext : DbContext
     }
 
     public  DbSet<StudTable> StudTable { get; set; }
+  
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<StudTable>(entity =>

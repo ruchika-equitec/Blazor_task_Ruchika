@@ -22,6 +22,7 @@ namespace BlazorApp1.Models
         Task<List<StudViewByIdResult>> StudViewByIdAsync(int? StudentId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<StudViewWithPageSizeResult>> StudViewWithPageSizeAsync(int? PageSize, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<int> UpdateStudentAsync(int? StudentID, string Name, string EmailID, int? Age, string Skills, int? Fees, string Gender, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+      
     }
     
 }

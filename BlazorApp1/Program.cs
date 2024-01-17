@@ -23,7 +23,7 @@ namespace BlazorApp1
 
             builder.Services.AddScoped<IStudentService, StudentService>();
 
-
+         
 
             var app = builder.Build();
             // Configure the HTTP request pipeline.

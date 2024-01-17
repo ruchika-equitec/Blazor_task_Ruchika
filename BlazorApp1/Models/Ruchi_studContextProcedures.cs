@@ -98,7 +98,6 @@ namespace BlazorApp1.Models
             var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[Retrive] @StudentID", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
-
             return _;
         }
 
@@ -110,18 +109,14 @@ namespace BlazorApp1.Models
                 Direction = System.Data.ParameterDirection.Output,
                 SqlDbType = System.Data.SqlDbType.Int,
             };
-
             var sqlParameters = new []
             {
                 parameterreturnValue,
             };
             var _ = await _context.SqlQueryAsync<SoftDeletedStudViewResult>("EXEC @returnValue = [dbo].[SoftDeletedStudView]", sqlParameters, cancellationToken);
-
             returnValue?.SetValue(parameterreturnValue.Value);
-
             return _;
         }
-
         public virtual async Task<int> SoftDeleteStudAsync(int? StudentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -259,7 +254,6 @@ namespace BlazorApp1.Models
 
             return _;
         }
-
         public virtual async Task<List<StudViewByIdResult>> StudViewByIdAsync(int? StudentId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter

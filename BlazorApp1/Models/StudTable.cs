@@ -2,9 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-
 namespace BlazorApp1.Models;
-
 public partial class StudTable
 {
     public int StudentId { get; set; }

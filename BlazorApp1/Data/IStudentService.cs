@@ -4,5 +4,12 @@ using System.Threading.Tasks;
 
 public interface IStudentService
 {
-    Task<List<StudTable>> GetStudentsAsync();
+    Task<List<StudViewResult>> StudViewAsync();
+    Task<int> StudAddDeleteAsync(int? studentID, string name, string emailID, int? age, string skills, string gender, int? fees);
+    Task UpdateStudentAsync(StudTable studs);
+    Task<StudTable> selectSingle3Async(int stuId);
+    Task SoftDeleteStudAsync(int stuid);
+    Task<List<SoftDeletedStudViewResult>> SoftDeletedStudViewAsync();
+    Task RetriveAsync(int id);
+    Task<StudTable> StudViewByIdAsync(int studentId);
 }

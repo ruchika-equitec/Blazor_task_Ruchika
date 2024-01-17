@@ -1,0 +1,45 @@
+﻿@using BlazorApp1.Models
+@page "/RetrieveStud"
+@inject IStudentService StudentService
+@inject IJSRuntime JSRuntime;
+@using Microsoft.JSInterop;
+
+<h3>RetrieveStud</h3>
+@if (softDeletedStudents != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Fees</th>
+                <th>Gender</th>
+                <th>EmailId</th>
+                <th>Skills</th>
+                <th> </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in softDeletedStudents)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.Fees</td>
+                    <td>@student.Gender</td>
+                    <td>@student.EmailID</td>
+                    <td>@student.Skills</td>
+                    <td class="btn">               
+                        <button class="btn btn-danger" @onclick="() => RetriveAsync(student.StudentID)">Restore</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No student data available.</p>
+}
+
