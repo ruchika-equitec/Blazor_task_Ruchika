@@ -6,10 +6,18 @@ namespace BlazorApp1.Pages
 {
     public partial class StudDetail
     {
+        [Parameter]
+        public int StudentId { get; set; }
         private List<StudViewResult>? students;
+        public string studentSkills;
         protected override async Task OnInitializedAsync()
         {
+            await base.OnInitializedAsync();
             students = await StudentService.StudViewAsync();
+            foreach (var student in students)
+            {
+                student.Skills = await StudentService.GetSkillsForStudentAsync(student.StudentID);
+            }
         }
         private void AddNewStudent()
         {
@@ -17,7 +25,6 @@ namespace BlazorApp1.Pages
         }
         private void EditStudent(StudViewResult student)
         {
-            // Call the method to navigate to the EditStudent page with the selected student
             NavigationManager.NavigateTo($"/UpdateStudent/{student.StudentID}");
         }
         private void DisplayStudent(StudViewResult student)
@@ -34,7 +41,6 @@ namespace BlazorApp1.Pages
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                // Handle or log the exception as needed
             }
         }
         private void RetrieveData()

@@ -1,79 +1,25 @@
 ﻿<!-- AddStudent.razor -->
 @page "/AddStudent"
+@using System.ComponentModel.DataAnnotations
 @using BlazorApp1.Models
 @inject IStudentService StudentService
 @inject NavigationManager NavigationManager
 <h3>Add New Student</h3>
-
-@* 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" @bind="newStudent.Name" />
-          
-            </div>
-
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" class="form-control" id="age" @bind="newStudent.Age" />
-             
-                 <label for="age">Age:</label>
-              
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" @bind="newStudent.EmailID" />
-               
-            </div>
-
-            <div class="form-group">
-                <label for="fees">Fees:</label>
-                <input type="number" class="form-control" id="fees" @bind="newStudent.Fees" />
-             
-            </div>
-
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select class="form-control" id="gender" @bind="newStudent.Gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="skills">Skills:</label>
-                <div>
-                    @foreach (var skill in skills)
-                    {
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="@skill.Name" @bind="skill.IsSelected" />
-                            <label class="form-check-label" for="@skill.Name">@skill.Name</label>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
-</div>  *@
-@* =========================================================================================================================== *@
 <EditForm Model="@typeof(BlazorApp1.Models.StudTable)" OnValidSubmit="AddNewStudent" class="mt-3">
     <div class="mb-3">
         <label class="form-label" for="name">Name:</label>
         <InputText class="form-control" id="name" @bind-Value="newStudent.Name" placeholder="Enter your name" />
-
-
+        <ValidationMessage For="@(() => newStudent.Name)" />
     </div>
     <div class="mb-3">
         <label class="form-label" for="address">Email:</label>
-        <InputText class="form-control" id="address" @bind-Value="newStudent.EmailID" placeholder="Enter your address" />
+        <InputText class="form-control" id="address" @bind-Value="newStudent.EmailId" placeholder="Enter your address" />
+        <ValidationMessage For="@(() => newStudent.EmailId)" />
     </div>
     <div class="mb-3">
         <label class="form-label" for="age">Age:</label>
         <InputNumber class="form-control" id="age" @bind-Value="newStudent.Age" placeholder="Enter your age" />
+        <ValidationMessage For="@(() => newStudent.Age)" />
     </div>
     <div class="form-group">
         <label for="gender">Gender:</label>
@@ -82,10 +28,12 @@
             <option value="Female">Female</option>
             <option value="Other">Other</option>
         </select>
+        <ValidationMessage For="@(() => newStudent.Gender)" />
     </div>
     <div class="mb-3">
         <label class="form-label" for="fees">Fees:</label>
         <InputNumber class="form-control" id="fees" @bind-Value="newStudent.Fees" placeholder="Enter Fees" />
+        <ValidationMessage For="@(() => newStudent.Fees)" />
     </div>
     <div class="form-group">
         <label for="skills">Skills:</label>
@@ -93,16 +41,13 @@
             @foreach (var skill in skills)
             {
                 <div class="form-check">
-                    <InputCheckbox class="form-check-input" id="@skill.Name" @bind-Value="skill.IsSelected" />
-
+                    <input type="checkbox" class="form-check-input" id="@skill.Name" @bind="skill.IsSelected" />
                     <label class="form-check-label" for="@skill.Name">@skill.Name</label>
                 </div>
             }
         </div>
     </div>
     <div>
-        <button type="submit" class="btn btn-primary">Add Employee</button>
+        <button type="submit" class="btn btn-primary">Add Student</button>
     </div>
 </EditForm>
-@* <button @onclick="AddNewStudent">Add Student</button> *@
-@* <button type="button" class="btn btn-primary" @onclick="AddNewStudent">Add Student</button> *@

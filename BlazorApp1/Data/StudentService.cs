@@ -15,7 +15,6 @@ public class StudentService : IStudentService
     {
         _dbContext = dbContext;
     }
-
     public async Task<List<StudViewResult>> StudViewAsync()
     {
         return await _dbContext.Procedures.StudViewAsync();
@@ -26,10 +25,8 @@ public class StudentService : IStudentService
     }
     public async Task<int> StudAddDeleteAsync(int? studentID, string name, string emailID, int? age, string skills, string gender, int? fees)
     {
-        // Assuming StudAddDelete is a stored procedure in your DbContext
         return await _dbContext.Procedures.StudAddDeleteAsync(studentID, name, emailID, age, skills, gender, fees);
     }
-    //edit
     public async Task UpdateStudentAsync(StudTable studs)
     {
         try
@@ -44,25 +41,22 @@ public class StudentService : IStudentService
     }
     public async Task<StudTable> selectSingle3Async(int stuId)
     {
-        StudTable studs = _dbContext.StudTable.Where(x => x.StudentId == stuId).SingleOrDefault();
+        StudTable studs = _dbContext.StudTables.Where(x => x.StudentId == stuId).SingleOrDefault();
         if (studs == null)
         {
             return null;
         }
         return studs;
     }
-    //delete
     public async Task SoftDeleteStudAsync(int id)
     {
         try
         {
-            var sToDelete = await _dbContext.StudTable.FindAsync(id);
-
+            var sToDelete = await _dbContext.StudTables.FindAsync(id);
             if (sToDelete != null)
             {
                 await _dbContext.Procedures.SoftDeleteStudAsync(sToDelete.StudentId);
-
-                sToDelete.IsDeleted = true; // Assuming IsActive is the property for soft delete
+                sToDelete.IsDeleted = true; 
                 _dbContext.Entry(sToDelete).State = EntityState.Modified;
                 await _dbContext.SaveChangesAsync();
             }
@@ -73,22 +67,20 @@ public class StudentService : IStudentService
         }
         catch (Exception ex)
         {
-            // Handle or log the exception
             Console.WriteLine($"Error: {ex.Message}");
-            throw; // Rethrow the exception if necessary
+            throw; 
         }
     }
     public async Task RetriveAsync(int id)
     {
         try
         {
-            var sToDelete = await _dbContext.StudTable.FindAsync(id);
+            var sToDelete = await _dbContext.StudTables.FindAsync(id);
 
             if (sToDelete != null)
             {
                 await _dbContext.Procedures.RetriveAsync(sToDelete.StudentId);
-
-                sToDelete.IsDeleted = false; // Assuming IsActive is the property for soft delete
+                sToDelete.IsDeleted = false; 
                 _dbContext.Entry(sToDelete).State = EntityState.Modified;
                 await _dbContext.SaveChangesAsync();
             }
@@ -99,15 +91,57 @@ public class StudentService : IStudentService
         }
         catch (Exception ex)
         {
-            // Handle or log the exception
             Console.WriteLine($"Error: {ex.Message}");
-            throw; // Rethrow the exception if necessary
+            throw; 
         }
     }
-    //view
     public async Task<StudTable> StudViewByIdAsync(int studentId)
     {
-        return await _dbContext.StudTable.FindAsync(studentId);
+        return await _dbContext.StudTables.FindAsync(studentId);
     }
+    public async Task<string> GetSkillsForStudentAsync(int studentID)
+    {
+        try
+        {
+            var result = await _dbContext.Procedures.GetSkillsForStudentAsync(studentID);
+            return string.Join(", ", result.Select(skill => skill.SkillName));
+        }
+        catch (Exception ex)
+        {          
+            Console.WriteLine($"Error fetching student skills: {ex.Message}");
+            return "Skills Not Available";
+        }
+    }
+    public async Task AddStudentSkillsAsync(int studentId, string skillIds)
+    {
+        try
+        {          
+            await _dbContext.Procedures.AddStudentSkillsAsync(studentId, skillIds);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            throw; 
+        }
+    }
+    public async Task<int> GetStudentIdByEmailAsync(string email)
+    {
+        try
+        {
+            var student = await _dbContext.StudTables
+                .Where(s => s.EmailId == email)
+                .FirstOrDefaultAsync();
 
+            if (student != null)
+            {
+                return student.StudentId;
+            }
+            return -1;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            throw; 
+        }
+    }
 }

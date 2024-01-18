@@ -2,7 +2,9 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+
 namespace BlazorApp1.Models;
+
 public partial class StudTable
 {
     public int StudentId { get; set; }
@@ -20,4 +22,6 @@ public partial class StudTable
     public string EmailId { get; set; }
 
     public string Skills { get; set; }
+
+    public virtual ICollection<SkillsTable> SkillsNavigation { get; set; } = new List<SkillsTable>();
 }

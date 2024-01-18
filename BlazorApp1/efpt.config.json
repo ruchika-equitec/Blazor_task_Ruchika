@@ -16,11 +16,27 @@
    "T4TemplatePath": null,
    "Tables": [
       {
+         "Name": "[dbo].[CombinationTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Skills_Table]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[StudTable]",
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[AddStudentSkills]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[DeleteStud]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[GetSkillsForStudent]",
          "ObjectType": 1
       },
       {

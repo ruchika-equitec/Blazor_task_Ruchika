@@ -12,4 +12,7 @@ public interface IStudentService
     Task<List<SoftDeletedStudViewResult>> SoftDeletedStudViewAsync();
     Task RetriveAsync(int id);
     Task<StudTable> StudViewByIdAsync(int studentId);
+    Task<string> GetSkillsForStudentAsync(int studentID);
+    Task AddStudentSkillsAsync(int studentId, string skillIds);
+    Task<int> GetStudentIdByEmailAsync(string email);
 }

@@ -34,6 +34,7 @@ namespace BlazorApp1.Models
 
         protected void OnModelCreatingGeneratedProcedures(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<GetSkillsForStudentResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<SoftDeletedStudViewResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<StudViewResult>().HasNoKey().ToView(null);
             modelBuilder.Entity<StudViewByIdResult>().HasNoKey().ToView(null);
@@ -48,6 +49,39 @@ namespace BlazorApp1.Models
         public Ruchi_studContextProcedures(Ruchi_studContext context)
         {
             _context = context;
+        }
+
+        public virtual async Task<int> AddStudentSkillsAsync(int? StudentID, string SkillIDs, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "StudentID",
+                    Value = StudentID ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "SkillIDs",
+                    Size = -1,
+                    Value = SkillIDs ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[AddStudentSkills] @StudentID, @SkillIDs", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
         }
 
         public virtual async Task<int> DeleteStudAsync(int? StudentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
@@ -76,6 +110,32 @@ namespace BlazorApp1.Models
             return _;
         }
 
+        public virtual async Task<List<GetSkillsForStudentResult>> GetSkillsForStudentAsync(int? StudentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "StudentID",
+                    Value = StudentID ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<GetSkillsForStudentResult>("EXEC @returnValue = [dbo].[GetSkillsForStudent] @StudentID", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<int> RetriveAsync(int? StudentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -98,6 +158,7 @@ namespace BlazorApp1.Models
             var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[Retrive] @StudentID", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
+
             return _;
         }
 
@@ -109,14 +170,18 @@ namespace BlazorApp1.Models
                 Direction = System.Data.ParameterDirection.Output,
                 SqlDbType = System.Data.SqlDbType.Int,
             };
+
             var sqlParameters = new []
             {
                 parameterreturnValue,
             };
             var _ = await _context.SqlQueryAsync<SoftDeletedStudViewResult>("EXEC @returnValue = [dbo].[SoftDeletedStudView]", sqlParameters, cancellationToken);
+
             returnValue?.SetValue(parameterreturnValue.Value);
+
             return _;
         }
+
         public virtual async Task<int> SoftDeleteStudAsync(int? StudentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -208,7 +273,6 @@ namespace BlazorApp1.Models
 
             return _;
         }
-
         public virtual async Task<int> StudDeleteByIdAsync(int? StudentId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -254,6 +318,7 @@ namespace BlazorApp1.Models
 
             return _;
         }
+
         public virtual async Task<List<StudViewByIdResult>> StudViewByIdAsync(int? StudentId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
