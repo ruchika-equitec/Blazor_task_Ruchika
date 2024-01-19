@@ -11,7 +11,7 @@ public partial class StudTable
 
     public string Name { get; set; }
 
-    public int? Age { get; set; }
+    public int Age { get; set; }
 
     public int Fees { get; set; }
 

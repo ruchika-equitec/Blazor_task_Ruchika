@@ -36,6 +36,10 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[EditStudentSkills]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[GetSkillsForStudent]",
          "ObjectType": 1
       },

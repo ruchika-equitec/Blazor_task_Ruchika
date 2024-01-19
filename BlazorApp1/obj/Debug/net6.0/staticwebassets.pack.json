@@ -13,6 +13,270 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\Account\\login.css",
+      "PackagePath": "staticwebassets\\css\\css\\Account\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\Dashboard\\slick-theme.css",
+      "PackagePath": "staticwebassets\\css\\css\\Dashboard\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\Dashboard\\slick.css",
+      "PackagePath": "staticwebassets\\css\\css\\Dashboard\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\Dashboard\\style.css",
+      "PackagePath": "staticwebassets\\css\\css\\Dashboard\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\customize-style.css",
+      "PackagePath": "staticwebassets\\css\\css\\customize-style.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\daterangepicker.css",
+      "PackagePath": "staticwebassets\\css\\css\\daterangepicker.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-3-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-3-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-3.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-3.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-4-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-4-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-4.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-4.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-dataviz-v4.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-dataviz-v4.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-main-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-main-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-main.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-main.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-nordic.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-nordic.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-turquoise-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-turquoise-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-turquoise.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-turquoise.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-urban.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-urban.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\bootstrap-vintage.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\bootstrap-vintage.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-green-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-green-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-green.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-green.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-lavender-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-lavender-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-lavender.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-lavender.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-main-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-main-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-main.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-main.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-metro-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-metro-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-metro.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-metro.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-moonlight.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-moonlight.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-opal-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-opal-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-opal.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-opal.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-silver-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-silver-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-silver.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-silver.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\classic-uniform.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\classic-uniform.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-blue.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-blue.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-dataviz-v4.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-dataviz-v4.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-green.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-green.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-main-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-main-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-main.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-main.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-nordic.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-nordic.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-ocean-blue-a11y.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-ocean-blue-a11y.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-ocean-blue.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-ocean-blue.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-orange.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-orange.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-purple.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-purple.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-turquoise.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-turquoise.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\default-urban.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\default-urban.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\fluent-main.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\fluent-main.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-aqua-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-aqua-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-arctic.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-arctic.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-burnt-teal.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-burnt-teal.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-dataviz-v4.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-dataviz-v4.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-eggplant.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-eggplant.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-lime-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-lime-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-lime.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-lime.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-main-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-main-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-main.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-main.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-nova.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-nova.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-pacific-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-pacific-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-pacific.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-pacific.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-sky-dark.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-sky-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-sky.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-sky.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\kendo\\material-smoke.css",
+      "PackagePath": "staticwebassets\\css\\css\\kendo\\material-smoke.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\css\\css\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\slick.css",
+      "PackagePath": "staticwebassets\\css\\css\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\owner\\Downloads\\BlazorApp1\\Blazor_task_Ruchika\\BlazorApp1\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },

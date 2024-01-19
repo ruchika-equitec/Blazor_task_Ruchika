@@ -22,16 +22,23 @@ namespace BlazorApp1.Pages
         }
         public async Task EditStudent()
         {
-            studs.Skills = string.Join(",", skills.Where(skill => skill.IsSelected).Select(skill => skill.Name));
-            await StudentService.UpdateStudentAsync(studs);
-            NavigationManager.NavigateTo("/StudDetails");
-        }
+            if (studs != null)
+            {
 
+                studs.Skills = string.Join(",", skills.Where(skill => skill.IsSelected).Select(skill => skill.Name));
+                await StudentService.UpdateStudentAsync(studs);
+                int studentId = await StudentService.GetStudentIdByEmailAsync(studs.EmailId);
+                string selectedSkillsIds = string.Join(",", skills.Where(skill => skill.IsSelected).Select(skill => skill.ID.ToString()));
+                await StudentService.EditStudentSkillsAsync(studentId, selectedSkillsIds);
+                NavigationManager.NavigateTo("/MainStud");
+            }
+        }
         public class Skill
         {
-            public string? Name { get; set; }
+            public int ID { get; set; }
+            public string Name { get; set; }
             public bool IsSelected { get; set; }
         }
-    
-}
+
+    }
 }

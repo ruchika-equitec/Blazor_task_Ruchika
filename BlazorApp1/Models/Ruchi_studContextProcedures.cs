@@ -110,6 +110,39 @@ namespace BlazorApp1.Models
             return _;
         }
 
+        public virtual async Task<int> EditStudentSkillsAsync(int? StudentID, string SelectedSkillIDs, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "StudentID",
+                    Value = StudentID ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "SelectedSkillIDs",
+                    Size = -1,
+                    Value = SelectedSkillIDs ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.NVarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[EditStudentSkills] @StudentID, @SelectedSkillIDs", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<List<GetSkillsForStudentResult>> GetSkillsForStudentAsync(int? StudentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -208,7 +241,7 @@ namespace BlazorApp1.Models
             return _;
         }
 
-        public virtual async Task<int> StudAddDeleteAsync(int? StudentID, string Name, string EmailID, int? Age, string Skills, string Gender, int? Fees, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public virtual async Task<int> StudAddDeleteAsync(int? StudentID, string Name, string EmailID, int? Age, string Gender, int? Fees, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
             {
@@ -247,13 +280,6 @@ namespace BlazorApp1.Models
                 },
                 new SqlParameter
                 {
-                    ParameterName = "Skills",
-                    Size = -1,
-                    Value = Skills ?? Convert.DBNull,
-                    SqlDbType = System.Data.SqlDbType.NVarChar,
-                },
-                new SqlParameter
-                {
                     ParameterName = "Gender",
                     Size = 50,
                     Value = Gender ?? Convert.DBNull,
@@ -267,12 +293,13 @@ namespace BlazorApp1.Models
                 },
                 parameterreturnValue,
             };
-            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[StudAddDelete] @StudentID, @Name, @EmailID, @Age, @Skills, @Gender, @Fees", sqlParameters, cancellationToken);
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[StudAddDelete] @StudentID, @Name, @EmailID, @Age, @Gender, @Fees", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 
             return _;
         }
+
         public virtual async Task<int> StudDeleteByIdAsync(int? StudentId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -371,7 +398,7 @@ namespace BlazorApp1.Models
             return _;
         }
 
-        public virtual async Task<int> UpdateStudentAsync(int? StudentID, string Name, string EmailID, int? Age, string Skills, int? Fees, string Gender, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        public virtual async Task<int> UpdateStudentAsync(int? StudentID, string Name, string EmailID, int? Age, int? Fees, string Gender, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
             {
@@ -410,13 +437,6 @@ namespace BlazorApp1.Models
                 },
                 new SqlParameter
                 {
-                    ParameterName = "Skills",
-                    Size = -1,
-                    Value = Skills ?? Convert.DBNull,
-                    SqlDbType = System.Data.SqlDbType.NVarChar,
-                },
-                new SqlParameter
-                {
                     ParameterName = "Fees",
                     Value = Fees ?? Convert.DBNull,
                     SqlDbType = System.Data.SqlDbType.Int,
@@ -430,7 +450,7 @@ namespace BlazorApp1.Models
                 },
                 parameterreturnValue,
             };
-            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[UpdateStudent] @StudentID, @Name, @EmailID, @Age, @Skills, @Fees, @Gender", sqlParameters, cancellationToken);
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[UpdateStudent] @StudentID, @Name, @EmailID, @Age, @Fees, @Gender", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 

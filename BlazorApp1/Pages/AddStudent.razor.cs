@@ -19,11 +19,10 @@ namespace BlazorApp1.Pages
             if (IsValid())
             {
                 newStudent.Skills = string.Join(",", skills.Where(skill => skill.IsSelected).Select(skill => skill.Name));
-                await StudentService.StudAddDeleteAsync(newStudent.StudentId, newStudent.Name, newStudent.EmailId, newStudent.Age, newStudent.Skills, newStudent.Gender, newStudent.Fees);
+                await StudentService.StudAddDeleteAsync(newStudent.StudentId, newStudent.Name, newStudent.EmailId, newStudent.Age,  newStudent.Gender, newStudent.Fees);
                 int studentId = await StudentService.GetStudentIdByEmailAsync(newStudent.EmailId);
                 string selectedSkillsIds = string.Join(",", skills.Where(skill => skill.IsSelected).Select(skill => skill.ID.ToString()));
                 await StudentService.AddStudentSkillsAsync(studentId, selectedSkillsIds);
-
                 NavigationManager.NavigateTo("/StudDetails");
             }
         }

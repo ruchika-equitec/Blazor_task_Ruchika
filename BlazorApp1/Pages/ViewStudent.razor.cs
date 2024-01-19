@@ -7,18 +7,39 @@ namespace BlazorApp1.Pages
     {
         // private StudViewResult student;
         StudTable studs = new StudTable();
+
         [Parameter]
         public int StudentId { get; set; }
-
+        private List<Skill> skills = new List<Skill>
+    {
+       new Skill { ID = 1, Name = "Java", IsSelected = false },
+    new Skill { ID = 2, Name = "Python", IsSelected = false },
+    new Skill { ID = 3, Name = "C#", IsSelected = false },
+    new Skill { ID = 4, Name = "HTML", IsSelected = false },
+    new Skill { ID = 5, Name = "CSS", IsSelected = false }
+    };
+        private List<StudViewResult>? students;
         protected override async Task OnInitializedAsync()
         {
             studs = await StudentService.StudViewByIdAsync(StudentId);
+            students = await StudentService.StudViewAsync();
+            foreach (var student in students)
+            {
+                student.Skills = await StudentService.GetSkillsForStudentAsync(student.StudentID);
+            }
+
         }
         private StudTable newStudent = new StudTable();
 
         private void GoBack()
         {
             NavigationManager.NavigateTo("/StudDetails");
+        }
+        public class Skill
+        {
+            public int ID { get; set; }
+            public string Name { get; set; }
+            public bool IsSelected { get; set; }
         }
     }
 }

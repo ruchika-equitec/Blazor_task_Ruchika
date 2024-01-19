@@ -1,0 +1,23 @@
+﻿@page "/View/{studentId:int}"
+@using BlazorApp1.Models
+@inject IStudentService StudentService
+@inject NavigationManager NavigationManager
+<h3>Student Details</h3>
+@if (studs != null)
+{
+    <div>
+        <p><strong>Name:</strong> @studs.Name</p>
+        <p><strong>Age:</strong> @studs.Age</p>
+        <p><strong>Email:</strong> @studs.EmailId</p>
+        <p><strong>Skills:</strong> @studs.Skills</p>
+        <p><strong>Gender:</strong> @studs.Gender</p>
+    </div>
+}
+else
+{
+    <p>Student not found.</p>
+}
+<button type="button" class="btn btn-primary" @onclick="GoBack">Go Back</button>
+@code {
+
+}

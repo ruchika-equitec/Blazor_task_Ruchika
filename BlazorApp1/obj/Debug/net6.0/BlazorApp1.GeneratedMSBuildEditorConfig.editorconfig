@@ -26,6 +26,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkU3R1ZGVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/CollegeManagement/Add/AddStud.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVnZU1hbmFnZW1lbnRcQWRkXEFkZFN0dWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/CollegeManagement/Delete/DeleteStudent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVnZU1hbmFnZW1lbnRcRGVsZXRlXERlbGV0ZVN0dWRlbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/CollegeManagement/Modify/ModifyStudent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVnZU1hbmFnZW1lbnRcTW9kaWZ5XE1vZGlmeVN0dWRlbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/CollegeManagement/View/StudentMainView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVnZU1hbmFnZW1lbnRcVmlld1xTdHVkZW50TWFpblZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/ParticularStudent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFydGljdWxhclN0dWRlbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/RetrieveStud.razor]

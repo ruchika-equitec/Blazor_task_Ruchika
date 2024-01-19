@@ -1,0 +1,45 @@
+﻿@page "/ModStud"
+@using Microsoft.EntityFrameworkCore;
+@using BlazorApp1.Models;
+@inject IStudentService StudentService
+@inject IJSRuntime JSRuntime;
+@inject NavigationManager NavigationManager
+<h3>Modify</h3>
+@if (students != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Fees</th>
+                <th>Gender</th>
+                <th>EmailId</th>
+                <th>Skills</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in students)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.Fees</td>
+                    <td>@student.Gender</td>
+                    <td>@student.EmailID</td>
+                    <td>@student.Skills</td>
+                    <td>
+                    <button class="btn btn-primary" @onclick="() => EditStudent(student)">Edit</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No student data available for edit.</p>
+}
+
+

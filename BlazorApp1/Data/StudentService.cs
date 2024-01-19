@@ -23,15 +23,15 @@ public class StudentService : IStudentService
     {
         return await _dbContext.Procedures.SoftDeletedStudViewAsync();
     }
-    public async Task<int> StudAddDeleteAsync(int? studentID, string name, string emailID, int? age, string skills, string gender, int? fees)
+    public async Task<int> StudAddDeleteAsync(int? studentID, string name, string emailID, int? age, string gender, int? fees)
     {
-        return await _dbContext.Procedures.StudAddDeleteAsync(studentID, name, emailID, age, skills, gender, fees);
+        return await _dbContext.Procedures.StudAddDeleteAsync(studentID, name, emailID, age,gender, fees);
     }
     public async Task UpdateStudentAsync(StudTable studs)
     {
         try
         {
-            await _dbContext.Procedures.UpdateStudentAsync(studs.StudentId, studs.Name, studs.EmailId, studs.Age, studs.Skills, studs.Fees, studs.Gender);
+            await _dbContext.Procedures.UpdateStudentAsync(studs.StudentId, studs.Name, studs.EmailId, studs.Age, studs.Fees, studs.Gender);
         }
         catch (Exception ex)
         {
@@ -123,6 +123,19 @@ public class StudentService : IStudentService
             Console.WriteLine($"Error: {ex.Message}");
             throw; 
         }
+    }
+    public async Task EditStudentSkillsAsync(int studentId, string skillIds)
+    {
+        try
+        {
+            await _dbContext.Procedures.EditStudentSkillsAsync(studentId, skillIds);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            throw;
+        }
+
     }
     public async Task<int> GetStudentIdByEmailAsync(string email)
     {
