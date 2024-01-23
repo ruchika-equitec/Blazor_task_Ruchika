@@ -4,36 +4,40 @@
 @inject IStudentService StudentService
 @inject IJSRuntime JSRuntime;
 @inject NavigationManager NavigationManager
-<h3>StudentMainView</h3>
+ <h1 class="colorBlue">Student Main View</h1>
 @if (students != null)
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Fees</th>
-                <th>Gender</th>
-                <th>EmailId</th>
-                <th>Skills</th>
-                <th>Operations</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var student in students)
-            {
+    <div class="table_detailsemply">
+        <table class="employee_table loan_table" width="100%">
+            <thead>
                 <tr>
-                    <td>@student.Name</td>
-                    <td>@student.Age</td>
-                    <td>@student.Fees</td>
-                    <td>@student.Gender</td>
-                    <td>@student.EmailID</td>
-                    <td>@student.Skills</td>
-                    <button class="btn btn-info" @onclick="() => DisplayStudent(student)">Display</button>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Fees</th>
+                    <th>Gender</th>
+                    <th>EmailId</th>
+                    <th>Skills</th>
+                    <th>Operations</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var student in students)
+                {
+                    <tr>
+                        <td>@student.Name</td>
+                        <td>@student.Age</td>
+                        <td>@student.Fees</td>
+                        <td>@student.Gender</td>
+                        <td>@student.EmailID</td>
+                        <td>@student.Skills</td>
+                        <td>
+                            <button class="btn btn-primary" @onclick="() => DisplayStudent(student)">Display</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 else
 {

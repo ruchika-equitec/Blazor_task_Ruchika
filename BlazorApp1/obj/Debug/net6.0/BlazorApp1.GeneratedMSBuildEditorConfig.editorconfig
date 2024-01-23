@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVnZU1hbmFnZW1lbnRcRGVsZXRlXERlbGV0ZVN0dWRlbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/CollegeManagement/Delete/Restore.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVnZU1hbmFnZW1lbnRcRGVsZXRlXFJlc3RvcmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/CollegeManagement/Modify/ModifyStudent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29sbGVnZU1hbmFnZW1lbnRcTW9kaWZ5XE1vZGlmeVN0dWRlbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/DeleteConfoirm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlQ29uZm9pcm0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/owner/Downloads/BlazorApp1/Blazor_task_Ruchika/BlazorApp1/Pages/FetchData.razor]

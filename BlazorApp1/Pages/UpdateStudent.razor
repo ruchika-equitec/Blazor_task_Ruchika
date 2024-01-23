@@ -4,9 +4,102 @@
 @using BlazorApp1.Data
 @inject IStudentService StudentService
 @inject NavigationManager NavigationManager
-<h3 class="mt-4">Edit Student</h3>
+<h1 class="colorBlue">
+    Edit Student
+</h1>
+<EditForm  Model="@typeof(BlazorApp1.Models.StudTable)" OnValidSubmit="EditStudent">
+    <DataAnnotationsValidator />
+    <ul class="row forumBox">
+        <li class="col-3 required">
+            <label class="inputLabel">Name:</label>
+        </li>
+        <li class="col-3">
+            <div class="form_inputBox">
+                <InputText @bind-Value="studs.Name" class="form-control" maxlength="20" />
+            </div>
+            <div class="erroeText">
+                <ValidationMessage For="(() => studs.Name)"></ValidationMessage>
+            </div>
+        </li>
+        <li class="col-3 required">
+            <label class="inputLabel">Age:</label>
+        </li>
+        <li class="col-3">
+            <div class="form_inputBox">
+                <InputNumber @bind-Value=" studs.Age" class="form-control" maxlength="20" />
+            </div>
+            <div class="erroeText">
+                <ValidationMessage For="(() =>  studs.Age)"></ValidationMessage>
+            </div>
+        </li>
+        <li class="col-3 required">
+            <label class="inputLabel">Email</label>
+        </li>
+        <li class="col-3">
+            <div class="form_inputBox">
+                <InputText @bind-Value="studs.EmailId" class="form-control" maxlength="20" />
+            </div>
+            <div class="erroeText">
+                <ValidationMessage For="(() =>  studs.EmailId)"></ValidationMessage>
+            </div>
+        </li>
+        <li class="col-3 required">
+            <label class="inputLabel">Fees</label>
+        </li>
+        <li class="col-3">
+            <div class="form_inputBox">
+                <InputNumber @bind-Value="studs.Fees" class="form-control" maxlength="20" />
+            </div>
+            <div class="erroeText">
+                <ValidationMessage For="(() => studs.Fees)"></ValidationMessage>
+            </div>
+        </li>
+        <li class="col-3 required">
+            <label class="inputLabel">Gender</label>
+        </li>
+        <li class="col-3">
+            <div class="form_inputBox">
 
-<EditForm Model="@typeof(BlazorApp1.Models.StudTable)" OnValidSubmit="EditStudent" class="mt-3">
+                <select class="form-control" id="gender" @bind="studs.Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="errorText">
+                <ValidationMessage For="@(() => studs.Gender)"></ValidationMessage>
+            </div>
+        </li>
+
+        <li class="col-3">
+            <label class="inputLabel">Skills:</label>
+        </li>
+        <li class="col-3">
+            <div class="mb-3">
+                <div>
+                    @foreach (var skill in skills)
+                    {
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="@skill.Name" @bind="skill.IsSelected" />
+                            <label class="form-check-label" for="@skill.Name">@skill.Name</label>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="erroeText">
+                <ValidationMessage For="(() => studs.Skills)"></ValidationMessage>
+            </div>
+        </li>
+        <li class="col-12 mt_20">
+            <div class="form_btns">
+                <button type="submit" class="common_btn btnBlue">Save</button>
+
+            </div>
+        </li>
+    </ul>
+</EditForm>
+
+
+@* <EditForm Model="@typeof(BlazorApp1.Models.StudTable)" OnValidSubmit="EditStudent" class="mt-3">
     <div class="mb-3">
         <label class="form-label" for="name">Name:</label>
         <InputText class="form-control" id="name" @bind-Value="studs.Name" placeholder="Enter your name" />
@@ -52,3 +145,6 @@
     </div>
 </EditForm>
 
+
+
+ *@

@@ -13,10 +13,8 @@ namespace BlazorApp1.Pages.CollegeManagement.Modify
         {
             await base.OnInitializedAsync();
             students = await StudentService.StudViewAsync();
-            foreach (var student in students)
-            {
-                student.Skills = await StudentService.GetSkillsForStudentAsync(student.StudentID);
-            }
+          
+           
         }
         private void EditStudent(StudViewResult student)
         {

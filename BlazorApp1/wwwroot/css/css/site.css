@@ -34,3 +34,20 @@ html {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+/*.input-validation-error {
+    border: 1px solid #ff0000;*/ /* Red border for invalid input */
+/*}*/
+
+/* Style for validation message */
+/*.validation-message {
+    color: #ff0000;*/ /* Red text color for validation message */
+    /*font-size: 0.8em;*/ /* Adjust font size as needed */
+/*}*/
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}

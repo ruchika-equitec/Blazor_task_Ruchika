@@ -30,6 +30,7 @@ namespace BlazorApp1.Pages
             {
                 await StudentService.RetriveAsync(stuid);
                 await JSRuntime.InvokeVoidAsync("location.reload");
+                await JSRuntime.InvokeVoidAsync("alert", "Student deleted successfully!");
             }
             catch (Exception ex)
             {

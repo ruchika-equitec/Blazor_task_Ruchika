@@ -15,20 +15,13 @@ namespace BlazorApp1.Pages.CollegeManagement.View
         {
             await base.OnInitializedAsync();
             students = await StudentService.StudViewAsync();
-            foreach (var student in students)
-            {
-                student.Skills = await StudentService.GetSkillsForStudentAsync(student.StudentID);
-            }
+            
         }
-        private void AddNewStudent()
+         private void DisplayStudent(StudViewResult student)
         {
-            NavigationManager.NavigateTo("/AddStudent");
+            NavigationManager.NavigateTo($"/ViewStudent/{student.StudentID}");
         }
-      
-        private void DisplayStudent(StudViewResult student)
-        {
-            NavigationManager.NavigateTo($"/View/{student.StudentID}");
-        }
+       
         public async Task SoftDeleteStudAsync(int stuid)
         {
             try
@@ -41,9 +34,9 @@ namespace BlazorApp1.Pages.CollegeManagement.View
                 Console.WriteLine($"Error: {ex.Message}");
             }
         }
-        private void RetrieveData()
-        {
-            NavigationManager.NavigateTo("/RetrieveStud");
-        }
+        //private void RetrieveData()
+        //{
+        //    NavigationManager.NavigateTo("/RetrieveStud");
+        //}
     }
 }

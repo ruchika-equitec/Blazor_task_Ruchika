@@ -4,42 +4,42 @@
 @inject IJSRuntime JSRuntime;
 @using Microsoft.JSInterop;
 
-<h3>RetrieveStud</h3>
 @if (softDeletedStudents != null)
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Fees</th>
-                <th>Gender</th>
-                <th>EmailId</th>
-                <th>Skills</th>
-                <th> </th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var student in softDeletedStudents)
-            {
+    <h1 class="colorBlue">Student List</h1>
+    <div class="table_detailsemply">
+        <table class="employee_table loan_table" width="100%">
+            <thead>
                 <tr>
-                    <td>@student.Name</td>
-                    <td>@student.Age</td>
-                    <td>@student.Fees</td>
-                    <td>@student.Gender</td>
-                    <td>@student.EmailID</td>
-                    <td>@student.Skills</td>
-                    <td class="btn">               
-                        <button class="btn btn-danger" @onclick="() => RetriveAsync(student.StudentID)">Restore</button>
-                    </td>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Fees</th>
+                    <th>Gender</th>
+                    <th>EmailId</th>
+                    <th>Skills</th>
+                    <th>Operations</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var student in softDeletedStudents)
+                {
+                    <tr>
+                        <td>@student.Name</td>
+                        <td>@student.Age</td>
+                        <td>@student.Fees</td>
+                        <td>@student.Gender</td>
+                        <td>@student.EmailID</td>
+                        <td>@student.Skills</td>
+                        <td>
+                            <button class="btn btn-danger" @onclick="() => RetriveAsync(student.StudentID)">Retrive</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 else
 {
-    <p>No student data available.</p>
+    <p>No student data available for edit.</p>
 }
-

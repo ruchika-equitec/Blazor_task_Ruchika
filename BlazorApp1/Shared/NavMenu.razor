@@ -1,4 +1,5 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@inject NavigationManager   navigate
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">BlazorApp1</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -34,10 +35,9 @@
      <div class="nav-item px-3">
             <NavLink class="nav-link" href="" @onclick="()=>expandSubMenu= !expandSubMenu">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> College Student
-            </NavLink>
-       
-            if(expandSubMenu){
-            <NavLink class="nav-link" href="addStud">
+            </NavLink>      
+            @if(expandSubMenu){
+                <NavLink class="nav-link" href="addStud">
                 <span class="oi oi-plus" aria-hidden="true"></span> Add
             </NavLink>
             <NavLink class="nav-link" href="deleteStud">
@@ -48,6 +48,9 @@
             </NavLink>
             <NavLink class="nav-link" href="MainStud">
                 <span class="oi oi-eye" aria-hidden="true"></span> View
+            </NavLink>
+                <NavLink class="nav-link" href="RetrieveStud">
+                <span class="oi oi-eye" aria-hidden="true"></span> Restore
             </NavLink>
             }
         </div>
@@ -63,4 +66,12 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
+    private void RedirectToPage(char type)
+    {
+        if (type == 'A')
+        {
+            navigate.NavigateTo("/addStud",true);
+        }
+    }
 }
+ @* @onclick="()=> RedirectToPage('A') *@

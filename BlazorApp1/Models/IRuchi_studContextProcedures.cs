@@ -19,11 +19,11 @@ namespace BlazorApp1.Models
         Task<int> RetriveAsync(int? StudentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<SoftDeletedStudViewResult>> SoftDeletedStudViewAsync(OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<int> SoftDeleteStudAsync(int? StudentID, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
-        Task<int> StudAddDeleteAsync(int? StudentID, string Name, string EmailID, int? Age, string Gender, int? Fees, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<int> StudAddDeleteAsync(int? StudentID, string Name, string EmailID, int? Age, string Gender, int? Fees, string Skills, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<int> StudDeleteByIdAsync(int? StudentId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<StudViewResult>> StudViewAsync(OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<StudViewByIdResult>> StudViewByIdAsync(int? StudentId, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<StudViewWithPageSizeResult>> StudViewWithPageSizeAsync(int? PageSize, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
-        Task<int> UpdateStudentAsync(int? StudentID, string Name, string EmailID, int? Age, int? Fees, string Gender, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<int> UpdateStudentAsync(int? StudentID, string Name, string EmailID, int? Age, int? Fees, string Gender, string Skills, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
     }
 }

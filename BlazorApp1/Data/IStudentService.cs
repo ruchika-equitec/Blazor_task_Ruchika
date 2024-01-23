@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 public interface IStudentService
 {
     Task<List<StudViewResult>> StudViewAsync();
-    Task<int> StudAddDeleteAsync(int? studentID, string name, string emailID, int? age, string gender, int? fees);
+    Task<int> StudAddDeleteAsync(int? studentID, string name, string emailID, int? age, string gender, int? fees,string skills);
     Task UpdateStudentAsync(StudTable studs);
     Task<StudTable> selectSingle3Async(int stuId);
     Task SoftDeleteStudAsync(int stuid);

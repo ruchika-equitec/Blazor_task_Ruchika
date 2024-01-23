@@ -23,15 +23,15 @@ public class StudentService : IStudentService
     {
         return await _dbContext.Procedures.SoftDeletedStudViewAsync();
     }
-    public async Task<int> StudAddDeleteAsync(int? studentID, string name, string emailID, int? age, string gender, int? fees)
+    public async Task<int> StudAddDeleteAsync(int? studentID, string name, string emailID, int? age, string gender, int? fees,string skills)
     {
-        return await _dbContext.Procedures.StudAddDeleteAsync(studentID, name, emailID, age,gender, fees);
+        return await _dbContext.Procedures.StudAddDeleteAsync(studentID, name, emailID, age,gender, fees,skills);
     }
     public async Task UpdateStudentAsync(StudTable studs)
     {
         try
         {
-            await _dbContext.Procedures.UpdateStudentAsync(studs.StudentId, studs.Name, studs.EmailId, studs.Age, studs.Fees, studs.Gender);
+            await _dbContext.Procedures.UpdateStudentAsync(studs.StudentId, studs.Name, studs.EmailId, studs.Age, studs.Fees, studs.Gender,studs.Skills);
         }
         catch (Exception ex)
         {
